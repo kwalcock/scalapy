@@ -19,8 +19,6 @@ resolvers ++= Seq(
 //  Resolvers.jitpackResolver // Ontologies
 )
 
-lazy val common = project
-
 lazy val GettingStarted = project
 
 lazy val InteractingWithPython = project
