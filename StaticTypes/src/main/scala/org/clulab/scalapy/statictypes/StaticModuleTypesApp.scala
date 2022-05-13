@@ -8,5 +8,5 @@ import me.shadaj.scalapy.py
 
 object StaticModuleTypesApp extends App {
 
-  StringsModule.digits
+  println(StringsModule.digits)
 }
