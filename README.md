@@ -19,10 +19,15 @@ sbt:scalapy> GettingStarted/runMain org.clulab.scalapy.gettingstarted.HelloWorld
 
     It may be important to match the Java VM hardware architecture to architecture used by PyTorch.
 
-    * Result: -Djna.library.path=/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/config-3.10-darwin:/Library/Frameworks/Python.framework/Versions/3.10/lib
-    * Result: -Dscalapy.python.library=python3.10
-    * Result: -Dscalapy.python.programname=/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+    * Python: -Djna.library.path=/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/config-3.10-darwin:/Library/Frameworks/Python.framework/Versions/3.10/lib
+    * Python: -Dscalapy.python.library=python3.10
+    * Python: -Dscalapy.python.programname=/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
 
 
 * Windows:
 
+    The automatic configuration does not work with Windows, so values need to be entered into the `python.sbt` files for each subproject.
+    
+    * "-Djna.library.path=D:/ProgramFiles/Python39",
+    * "-Dscalapy.python.library=python39"
+    

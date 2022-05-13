@@ -4,17 +4,15 @@ import org.clulab.sbt.BuildUtils
 lazy val javaOpts = {
   if (BuildUtils.isWindows())
     // Fill this in manually.
-    Seq("-Djna.library.path=" +
-      Seq(
-        "D:/ProgramFiles/Python39",
-        "D:/ProgramFiles/Python39/DLLs"
-      ).mkString(";")
+    Seq(
+      "-Djna.library.path=D:/ProgramFiles/Python39",
+      "-Dscalapy.python.library=python39"
     )
   else {
     val result = Python().scalapyProperties.get.map { case (key, value) =>
       s"-D$key=$value"
     }.toSeq
-    result.foreach { result => println(s"Result: $result") }
+    result.foreach { result => println(s"Python: $result") }
     result
   }
 }
